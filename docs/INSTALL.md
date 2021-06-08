@@ -213,6 +213,25 @@ For notifications the following is also necessary:
 sudo apt install libnotify-dev
 ```
 
+### Dependencies: Debian 10 (x86_64)
+
+**Note:** Build environment must have at least 1GB of memory & 1GB swap space. Check with `swapon`.
+
+```text
+sudo apt install build-essential
+sudo apt install libcurl4-openssl-dev
+sudo apt install libsqlite3-dev
+sudo apt install pkg-config
+sudo apt install git
+sudo apt install curl
+wget https://github.com/ldc-developers/ldc/releases/download/v1.26.0/ldc2-1.26.0-linux-x86_64.tar.xz
+tar -xvf ldc2-1.26.0-linux-x86_64.tar.xz
+```
+For notifications the following is also necessary:
+```text
+sudo apt install libnotify-dev
+```
+
 ### Dependencies: Gentoo
 ```text
 sudo emerge app-portage/layman
@@ -319,6 +338,15 @@ sudo make install
 git clone https://github.com/abraunegg/onedrive.git
 cd onedrive
 ./configure DC=~/ldc2-1.25.1-linux-aarch64/bin/ldmd2
+make clean; make
+sudo make install
+```
+
+#### x86_64 Architecture
+```text
+git clone https://github.com/abraunegg/onedrive.git
+cd onedrive
+./configure DC=~/ldc2-1.26.0-linux-x86_64/bin/ldmd2
 make clean; make
 sudo make install
 ```
